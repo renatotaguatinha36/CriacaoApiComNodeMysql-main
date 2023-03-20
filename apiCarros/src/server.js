@@ -10,7 +10,7 @@ server.use(cors());
 server.use(bodyParser.urlencoded({extended: false}));
 server.use('/api', routes);
 
-server.listen(3000,()=>{
+server.listen(3001,()=>{
     console.log(`Servidor rodando em: http://localhost: 3000`);
 });
 
