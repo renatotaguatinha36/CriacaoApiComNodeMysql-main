@@ -10,7 +10,8 @@ module.exports = {
         for(let i in carros){
             json.result.push({
                 codigo: carros[i].codigo,
-                descricao: carros[i].modelo
+                descricao: carros[i].modelo,
+                placa: carros[i].placa
 
             });
         }
@@ -41,8 +42,8 @@ module.exports = {
             let CarroCodigo = await CarroService.inserir(modelo, placa);
             json.result = {
                 codigo: CarroCodigo,
-                modelo,
-                placa
+                modelo: modelo,
+                placa:placa
             };
         }else{
             json.error = 'Campos não enviados';
